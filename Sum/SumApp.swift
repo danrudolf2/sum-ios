@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SumApp: App {
+    private let themeManager = ThemeManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(themeManager)
         }
     }
 }
