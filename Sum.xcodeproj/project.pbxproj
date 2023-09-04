@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		262F81682A7AE0E700B91ACC /* SumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F81672A7AE0E700B91ACC /* SumApp.swift */; };
-		262F816A2A7AE0E700B91ACC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F81692A7AE0E700B91ACC /* ContentView.swift */; };
+		262F816A2A7AE0E700B91ACC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F81692A7AE0E700B91ACC /* CalculatorView.swift */; };
 		262F816C2A7AE0E800B91ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262F816B2A7AE0E800B91ACC /* Assets.xcassets */; };
 		262F816F2A7AE0E800B91ACC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 262F816E2A7AE0E800B91ACC /* Preview Assets.xcassets */; };
 		262F81792A7AE0E800B91ACC /* SumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F81782A7AE0E800B91ACC /* SumTests.swift */; };
@@ -17,6 +17,7 @@
 		26CC68572AA6519D0071AE5E /* KeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC68562AA6519D0071AE5E /* KeypadView.swift */; };
 		26CC68592AA653BD0071AE5E /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC68582AA653BD0071AE5E /* ThemeManager.swift */; };
 		26CC685B2AA668700071AE5E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CC685A2AA668700071AE5E /* Theme.swift */; };
+		3742E7722AA679A40070C186 /* ThemeToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742E7712AA679A40070C186 /* ThemeToggleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 /* Begin PBXFileReference section */
 		262F81642A7AE0E700B91ACC /* Sum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		262F81672A7AE0E700B91ACC /* SumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumApp.swift; sourceTree = "<group>"; };
-		262F81692A7AE0E700B91ACC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		262F81692A7AE0E700B91ACC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		262F816B2A7AE0E800B91ACC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		262F816E2A7AE0E800B91ACC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		262F81742A7AE0E800B91ACC /* SumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +51,7 @@
 		26CC68562AA6519D0071AE5E /* KeypadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadView.swift; sourceTree = "<group>"; };
 		26CC68582AA653BD0071AE5E /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		26CC685A2AA668700071AE5E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		3742E7712AA679A40070C186 /* ThemeToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeToggleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,13 +102,13 @@
 		262F81662A7AE0E700B91ACC /* Sum */ = {
 			isa = PBXGroup;
 			children = (
+				3742E76E2AA66D3F0070C186 /* Theme */,
+				3742E76D2AA66D2D0070C186 /* ViewModel */,
+				3742E76C2AA66D1B0070C186 /* View */,
+				3742E76B2AA66D110070C186 /* Model */,
 				262F81672A7AE0E700B91ACC /* SumApp.swift */,
-				262F81692A7AE0E700B91ACC /* ContentView.swift */,
 				262F816B2A7AE0E800B91ACC /* Assets.xcassets */,
 				262F816D2A7AE0E800B91ACC /* Preview Content */,
-				26CC68562AA6519D0071AE5E /* KeypadView.swift */,
-				26CC68582AA653BD0071AE5E /* ThemeManager.swift */,
-				26CC685A2AA668700071AE5E /* Theme.swift */,
 			);
 			path = Sum;
 			sourceTree = "<group>";
@@ -134,6 +136,39 @@
 				262F81842A7AE0E800B91ACC /* SumUITestsLaunchTests.swift */,
 			);
 			path = SumUITests;
+			sourceTree = "<group>";
+		};
+		3742E76B2AA66D110070C186 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3742E76C2AA66D1B0070C186 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				262F81692A7AE0E700B91ACC /* CalculatorView.swift */,
+				26CC68562AA6519D0071AE5E /* KeypadView.swift */,
+				3742E7712AA679A40070C186 /* ThemeToggleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3742E76D2AA66D2D0070C186 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3742E76E2AA66D3F0070C186 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				26CC68582AA653BD0071AE5E /* ThemeManager.swift */,
+				26CC685A2AA668700071AE5E /* Theme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +301,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				262F816A2A7AE0E700B91ACC /* ContentView.swift in Sources */,
+				262F816A2A7AE0E700B91ACC /* CalculatorView.swift in Sources */,
 				26CC68592AA653BD0071AE5E /* ThemeManager.swift in Sources */,
+				3742E7722AA679A40070C186 /* ThemeToggleView.swift in Sources */,
 				26CC685B2AA668700071AE5E /* Theme.swift in Sources */,
 				262F81682A7AE0E700B91ACC /* SumApp.swift in Sources */,
 				26CC68572AA6519D0071AE5E /* KeypadView.swift in Sources */,

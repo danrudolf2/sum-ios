@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CalculatorView: View {
     
     @EnvironmentObject var themeManager: ThemeManager
 
@@ -18,7 +18,7 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
             Button("ChangeTheme") {
-                themeManager.switchTheme(newTheme: .dark)
+                themeManager.switchTheme()
             }
         }
         .background(themeManager.current.primaryColor)
@@ -26,9 +26,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CalculatorView()
             .environmentObject(ThemeManager())
     }
 }

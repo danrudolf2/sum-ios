@@ -13,7 +13,7 @@ struct SumApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CalculatorView()
                 .environmentObject(themeManager)
         }
     }
