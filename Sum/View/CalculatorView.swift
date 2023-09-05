@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct CalculatorView: View {
+struct CalculatorView<T>: View where T: CalculatorViewModelProtocol {
+    
+    @ObservedObject var viewModel: T
     
     @EnvironmentObject var themeManager: ThemeManager
 
@@ -15,6 +17,13 @@ struct CalculatorView: View {
         VStack {
             ThemeToggleView()
             Spacer()
+            HStack {
+                Spacer()
+                Text(String(viewModel.total.stringRepresentation))
+                    .padding()
+                    .font(Font.custom("Rubik-Light_Regular", size: 52))
+                    .lineLimit(1)
+            }
             ZStack {
                 KeypadView()
             }
@@ -31,7 +40,7 @@ struct CalculatorView: View {
 
 struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorView()
+        CalculatorView(viewModel: CalculatorViewModel())
             .environmentObject(ThemeManager())
     }
 }
