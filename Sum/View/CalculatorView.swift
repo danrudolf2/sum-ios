@@ -13,16 +13,19 @@ struct CalculatorView: View {
 
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-            Button("ChangeTheme") {
-                themeManager.switchTheme()
+            ThemeToggleView()
+            Spacer()
+            ZStack {
+                KeypadView()
             }
+            .padding(.top, 45)
+            .padding(.bottom, 25)
+            .background(themeManager.current.secondaryColor)
+            
+            
         }
+        .frame(maxWidth: .infinity)
         .background(themeManager.current.primaryColor)
-        .padding()
     }
 }
 

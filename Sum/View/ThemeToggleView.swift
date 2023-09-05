@@ -15,7 +15,7 @@ struct ThemeToggleView: View {
             Button {
                 themeManager.switchTheme()
             } label: {
-                Image("icon_sun")
+                Image("ic_sun")
                     .renderingMode(.template)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -23,31 +23,31 @@ struct ThemeToggleView: View {
                         themeManager.current.selectedTheme == .light ? themeManager.current.enabledIconColor : themeManager.current.disabledIconColor
                     )
             }
-            .frame(width: 20, height: 20)
+            .frame(width: 18, height: 18)
             .padding(EdgeInsets(top: 10,
-                                leading: 10,
+                                leading: 18,
                                 bottom: 10,
-                                trailing: 5))
+                                trailing: 8))
             Button {
                 themeManager.switchTheme()
             } label: {
-                Image("icon_moon")
-                    .resizable()
+                Image("ic_moon")
                     .renderingMode(.template)
+                    .resizable()
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(
                         themeManager.current.selectedTheme == .light ? themeManager.current.disabledIconColor : themeManager.current.enabledIconColor
                     )
             }
-            .frame(width: 19, height: 19)
+            .frame(width: 15, height: 15)
             .padding(EdgeInsets(top: 10,
-                                leading: 5,
+                                leading: 8,
                                 bottom: 10,
-                                trailing: 10))
+                                trailing: 18))
             
         }
         .background(themeManager.current.secondaryColor)
-        .clipShape(RoundedRectangle(cornerRadius: 10.0))
+        .clipShape(RoundedRectangle(cornerRadius: 12.0))
     }
 }
 
