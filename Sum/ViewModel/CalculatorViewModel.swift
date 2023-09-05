@@ -12,18 +12,23 @@ import Foundation
 }
 
 class CalculatorViewModel: CalculatorViewModelProtocol {
-    @Published var total: Double = 123456789123456789
+    @Published var total: Double = 123123123123
 }
 
 extension Double {
     var stringRepresentation: String {
         var result = "Err"
+        let max = 999999999999.0
+        let numberFormatter = NumberFormatter()
+        
         if self.truncatingRemainder(dividingBy: 1) == 0 {
             result = String(format: "%.0f", self)
         }
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
+        
+        numberFormatter.numberStyle = self > max ? .scientific : .decimal
+        numberFormatter.maximumFractionDigits = 9
         result = numberFormatter.string(from: NSNumber(value: self)) ?? "Err"
+        
         return result
     }
 }

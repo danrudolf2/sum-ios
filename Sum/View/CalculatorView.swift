@@ -21,8 +21,9 @@ struct CalculatorView<T>: View where T: CalculatorViewModelProtocol {
                 Spacer()
                 Text(String(viewModel.total.stringRepresentation))
                     .padding()
-                    .font(Font.custom("Rubik-Light_Regular", size: 52))
+                    .font(Font.custom("Rubik-Light_Regular", size: 54))
                     .lineLimit(1)
+                    .minimumScaleFactor(0.8)
             }
             ZStack {
                 KeypadView()
